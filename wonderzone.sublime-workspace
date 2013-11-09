@@ -1,0 +1,1126 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dbh",
+				"dbHost"
+			],
+			[
+				"tea",
+				"teachers"
+			],
+			[
+				"stu",
+				"students"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"stud",
+				"studentIds"
+			],
+			[
+				"assi",
+				"assignment"
+			],
+			[
+				"studen",
+				"students"
+			],
+			[
+				"use",
+				"users"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"as",
+				"assignment"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"qu",
+				"questionPool"
+			],
+			[
+				"questio",
+				"questionPool"
+			],
+			[
+				"chec",
+				"checked"
+			],
+			[
+				"cl",
+				"class"
+			],
+			[
+				"re",
+				"redirect"
+			],
+			[
+				"Er",
+				"err"
+			],
+			[
+				"fi",
+				"firstName"
+			],
+			[
+				"clas",
+				"clasDummy"
+			],
+			[
+				"teac",
+				"teacherObj"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"def",
+				"deferred"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"mu",
+				"mute_yellow"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"Class",
+				"Classroom"
+			],
+			[
+				"studn",
+				"student"
+			],
+			[
+				"stude",
+				"student-list"
+			],
+			[
+				"session",
+				"session"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"ch",
+				"checkValidSession"
+			],
+			[
+				"mute",
+				"mute_red"
+			],
+			[
+				"ses",
+				"session-key"
+			],
+			[
+				"se",
+				"session-key"
+			],
+			[
+				"em",
+				"emPixels"
+			],
+			[
+				"scr",
+				"scr	script()"
+			],
+			[
+				"mute_",
+				"mute_green"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"c",
+				"cla	class=\"\""
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"_c",
+				"_classes2"
+			],
+			[
+				"de",
+				"deferred"
+			],
+			[
+				"Clas",
+				"ClassSession"
+			],
+			[
+				"cla",
+				"classSessions"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"n",
+				"nth-child"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"USER",
+				"username"
+			],
+			[
+				"new",
+				"newuser"
+			],
+			[
+				"go",
+				"go_gradient"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"quest",
+				"questions"
+			],
+			[
+				"questi",
+				"question"
+			],
+			[
+				"add",
+				"addition"
+			],
+			[
+				"j",
+				"Johns"
+			],
+			[
+				"a",
+				"AuthenticationError"
+			],
+			[
+				"au",
+				"AuthenticationError"
+			],
+			[
+				"ha",
+				"hashPassword"
+			],
+			[
+				"pro",
+				"promise"
+			],
+			[
+				"red",
+				"redirect"
+			],
+			[
+				"Tes",
+				"Teachers"
+			],
+			[
+				"dis",
+				"disabledOptions"
+			],
+			[
+				"op",
+				"opButton"
+			],
+			[
+				"mul",
+				"Multiplication"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"li",
+				"lin	link()"
+			],
+			[
+				"l",
+				"lin	link()"
+			],
+			[
+				"qui",
+				"quizzes"
+			],
+			[
+				"to",
+				"toJSON"
+			],
+			[
+				"us",
+				"Username"
+			],
+			[
+				"que",
+				"query"
+			],
+			[
+				"ac",
+				"accountType"
+			],
+			[
+				"bu",
+				"but	button()"
+			],
+			[
+				"student",
+				"student"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"defe",
+				"defer"
+			],
+			[
+				"for",
+				"forin	Array Comprehension"
+			],
+			[
+				"quiz",
+				"quizzes"
+			],
+			[
+				"try",
+				"tryName"
+			],
+			[
+				"do",
+				"doSave"
+			],
+			[
+				"take",
+				"takeQuiz"
+			],
+			[
+				"tak",
+				"takeQuiz"
+			],
+			[
+				"so",
+				"should"
+			],
+			[
+				"last",
+				"lastName"
+			],
+			[
+				"first",
+				"firstName"
+			],
+			[
+				"test",
+				"testQuiz"
+			],
+			[
+				"te",
+				"testQuiz"
+			],
+			[
+				"q",
+				"quizSchema"
+			],
+			[
+				"mt",
+				"mute_green"
+			],
+			[
+				"respones",
+				"responses"
+			],
+			[
+				"ques",
+				"question"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"cook",
+				"cookieParser"
+			],
+			[
+				"num",
+				"numberButton"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bodr",
+				"border-radius"
+			],
+			[
+				"src",
+				"scr	script()"
+			],
+			[
+				"ad",
+				"append"
+			],
+			[
+				"input",
+				"inputBox"
+			],
+			[
+				"inp",
+				"inputBox"
+			],
+			[
+				"chat",
+				"chat_box"
+			],
+			[
+				"sty",
+				"stylesheets"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"mi",
+				"mixinSource"
+			],
+			[
+				"template",
+				"templateSource"
+			],
+			[
+				"mixin",
+				"mixins"
+			],
+			[
+				"temp",
+				"templateSource"
+			],
+			[
+				"load",
+				"loadScript"
+			],
+			[
+				"templ",
+				"templateName"
+			],
+			[
+				"ob",
+				"objects"
+			],
+			[
+				"buil",
+				"buildScript"
+			],
+			[
+				"crea",
+				"createQueries"
+			],
+			[
+				"buidl",
+				"buildScript"
+			],
+			[
+				"labe",
+				"label"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"tem",
+				"template"
+			],
+			[
+				"scri",
+				"script"
+			],
+			[
+				"mix",
+				"try_mixin"
+			],
+			[
+				"lab",
+				"label"
+			],
+			[
+				"label",
+				"label"
+			],
+			[
+				"pass",
+				"passable"
+			],
+			[
+				"obj",
+				"obj2"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Gruntfile.coffee",
+			"settings":
+			{
+				"buffer_size": 388,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/game.coffee",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/PlayState.coffee",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "game/game.js",
+			"settings":
+			{
+				"buffer_size": 172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
+			"settings":
+			{
+				"buffer_size": 1958,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/AAAPackageDev/Support/JSON to Property List.sublime-build",
+	"command_palette":
+	{
+		"height": 185.0,
+		"selected_items":
+		[
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"addr",
+				"Package Control: Add Repository"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 545.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Evan/Documents/GitHub/WonderZone/index.html",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/index.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/style.styl",
+		"/C/Users/Evan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/routes/login.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Mathlio.litcoffee",
+		"/C/Users/Evan/.ssh/id_rsa.pub",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/cakefile",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/newrelic.js",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/routes/test.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/routes/admin.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Session.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Teacher.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/User.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Classroom.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Student.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Procfile",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/package.json",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/admin.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Mathlio.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/login.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/test.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/dashboard.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/routes.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Classroom.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Student.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/dashboard.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/client/Dashboard.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/assignment.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/dashboard.styl",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/test/class.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Teacher.litcoffee",
+		"/C/Users/Evan/Documents/GitHub/scratch-html5/README",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/test/student.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/test/teacher.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/client/Login.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/User.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/addstudent.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/login.styl",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/results.styl",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/admin.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/index.styl",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Quiz.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/classlist.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Session.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/login.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/client/Main.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/test.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Session.litCoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/ClassSession.litCoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Class.litcoffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/student.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/newuser.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/quizSettings.json",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/test/quiz.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/public/js/Main.js",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/public/js/Dashboard.js",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/results.jade",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/test.styl",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Class.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Student.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/test/students.csv",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Teacher.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Quiz.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/School.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/tests/quiz.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Cakefile",
+		"/C/Users/Evan/Documents/My Box Files/#zap/test/board.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/tests/mocha.opts",
+		"/C/Users/Evan/Documents/My Box Files/#zap/test/mocha.opts",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/Mathlio.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Web.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Math/Quiz.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Math/views/css/style.styl",
+		"/C/Users/Evan/Documents/My Box Files/Math/views/test.jade",
+		"/C/Users/Evan/Documents/My Box Files/Math/client/Main.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Math/Mathlio.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap.coffee",
+		"/C/Users/Evan/Documents/My Box Files/Math/Cakefile",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/style.styl",
+		"/C/Users/Evan/Documents/My Box Files/Math/views/game.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/Cakefile",
+		"/C/Users/Evan/Documents/My Box Files/Math/cakefile",
+		"/C/Users/Evan/Documents/My Box Files/Math/package.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/SocketHandler.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/index.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/Game.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/game.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/Chat.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/chat.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/landing.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Player.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/admin.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/admin.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Server.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.jade",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/DB.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Manager.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Dungeon.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/Editor.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/ZapObject.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs",
+		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.example.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/.gitignore",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/BoardView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Lex.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/shared/Collide.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Query.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Parser.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/package.json",
+		"/C/Users/Evan/Documents/My Box Files/#zap/node_modules/jasmine-node/spec-requirejs-coffee/requirecs.sut.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/ObjectSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/node_modules/jasmine-node/spec-requirejs-coffee/RequireCsSpec.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/requirejs-setup.js",
+		"/C/Users/Evan/Documents/My Box Files/#zap/spec/Object.sut.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Query.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/ZapScript.pegjs",
+		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/editor.styl",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/colorpalette.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/ascii.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/QuickPaletteView.coffee",
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/ModalForms.coffee"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"dash",
+			"teachers[req.session.user].canAdministrateUser(db, req.params.username).then (allowed) =>",
+			"teachers[req.session.user].canAdministrateClass(db, req.params.id).then (allowed) =>",
+			")",
+			"newuser",
+			"Q.post",
+			"console.log",
+			"/login/class",
+			"icon",
+			"{",
+			"Session",
+			"res.render 'admin",
+			"ClassSession",
+			"class",
+			"Classroomes",
+			"class",
+			"Class",
+			"if",
+			"quizzes",
+			"only",
+			"console.info",
+			"console.log",
+			"of",
+			"query",
+			"list",
+			"button.",
+			"item",
+			"ShowAll",
+			"@buttons",
+			"@list",
+			"game",
+			"onSelect",
+			"buildt",
+			"mhxserver.mh.spusd.org",
+			"Bell",
+			"Bella",
+			"Samuel Vargas",
+			": ",
+			"shay",
+			"rec",
+			"\"\n    group_id = ",
+			"  when \"",
+			"PreParser",
+			"ZapScriptMode",
+			"bind",
+			"Dungeon",
+			"length",
+			"timeID",
+			"getPlayer",
+			"sessions",
+			"Zap.tiles",
+			"Zap.curBoard",
+			".for_edit",
+			"Editor.hideModal",
+			"Editor.showModal",
+			"Editor.",
+			"UI",
+			"console.log",
+			"identifier",
+			"integer",
+			"console.log",
+			"canste",
+			"internal",
+			"Zap.mode",
+			"Zap.me",
+			"Zap.background",
+			"Zap.foreground",
+			"Zap.buildType",
+			"node-static",
+			"labelIdx",
+			".send",
+			"conditions",
+			"Engine.pixels",
+			"s."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Teacher.canAdministrateUser(db, req.session.user, req.params.username).then (allowed) =>",
+			"Teacher.canAdministrateClass(db, req.session.user, req.params.id).then (allowed) =>",
+			"fa fa",
+			"Session",
+			"classes",
+			"Classroom",
+			"_props_.",
+			"@element",
+			"ShowObjects",
+			"@element",
+			"callback",
+			"#{server}",
+			"=",
+			",",
+			"",
+			"Zap.board",
+			"Widgets.modal.hide",
+			"Widgets.modal.show",
+			"HUD",
+			"positiveInteger",
+			"mode",
+			"background",
+			"foreground",
+			"buildType",
+			"				if e.keyCode == ZC.keys.editor then Zap.mode = 'play'\n\n				# Cycle foreground with [ and ]\n				if e.keyCode == 221\n					Zap.foreground = (Zap.foreground + 1) % 16\n					Zap.editHud.pointAt('fore', Zap.foreground)\n				else if e.keyCode == 219\n					Zap.foreground -= 1\n					if Zap.foreground == -1 then Zap.foreground = 15\n					Zap.editHud.pointAt('fore', Zap.foreground)\n\n				# Cycle background with ; and '\n				if e.keyCode == 222\n					Zap.background = (Zap.background + 1) % 16\n					Zap.editHud.pointAt('back', Zap.background)\n				else if e.keyCode == 186\n					Zap.background -= 1\n					if Zap.background == -1 then Zap.background = 15\n					Zap.editHud.pointAt('back', Zap.background)\n\n				# Cycle wall types with , and .\n				if e.keyCode == 190\n					i = (Zap.editHud.wallTypes.indexOf(Zap.buildType) + 1) % 6\n					Zap.buildType = Zap.editHud.wallTypes[i]\n					Zap.editHud.pointAt('wall', i)\n				else if e.keyCode == 188\n					i = Zap.editHud.wallTypes.indexOf(Zap.buildType) - 1\n					if i == -1 then i = 5\n					Zap.buildType = Zap.editHud.wallTypes[i]\n					Zap.editHud.pointAt('wall', i)\n\n				if Zap.buildType != 'space' \n					f = Zap.foreground\n					b = Zap.background",
+			"counts",
+			"operators",
+			"		conditions:\n			# Tests if the flag is true for the target. If isNot is true, checks if it is false.\n			is: (target, flag, isNot) ->\n				return flag(target, isNot)\n\n			# Tests if the target is of a particular type or if the target has the given name.\n			isa: (target, type, isNot) ->\n				# Do some kind of type checking I dunno.\n				return false\n\n			# Expects objects in the form of\n			# {target: sometarget, property: 'someproperty'}\n			equals: (first, second) ->\n				return first.target[first.property] == second.target[second.property]\n\n			greater: (first, second) ->\n				return first.target[first.property] > second.target[second.property]\n\n			less: (first, second) ->\n				return first.target[first.property] < second.target[second.property]\n\n			and: (first, second) ->\n				if first.condition is ZS.lex.conditions.is and second.condition is ZS.lex.conditions.is\n					return first.condition.apply(first.args) and second.condition.apply(second.args)\n\n			or: (first, second) ->\n				if first.condition is ZS.lex.conditions.is and second.condition is ZS.lex.conditions.is\n					return first.condition.apply(first.args) or second.condition.apply(second.args)",
+			"Engine.buffer",
+			"e."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Gruntfile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/game.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 85,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/PlayState.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "game/game.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.aaa_package_dev":
+	{
+		"height": 124.0
+	},
+	"output.exec":
+	{
+		"height": 0.0
+	},
+	"project": "wonderzone.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

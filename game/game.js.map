@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "game.js",
+  "sourceRoot": "",
+  "sources": [
+    "game.src.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;CAAA,KAAA,SAAA;KAAA;oSAAA;;CAAA,CAAM;CACJ;;CAAa,EAAA,CAAA,eAAA;CACX,EAAA,GAAA,CAAO,IAAP;CADF,IAAa;;CAAb,EAGS,IAAT,EAAS;CACP,EAA6B,CAAzB,CAAM,CAAV,GAAA,MAAA;CACQ,EAAR,CAAgB,CAAhB,EAAO,MAAP;CALF,IAGS;;CAHT;;CADsB,KAAM;;CAA9B,CAOA,CAAW,CAAX,CAAW,CAAM,GAAiD,GAAvD;CAPX"
+}
