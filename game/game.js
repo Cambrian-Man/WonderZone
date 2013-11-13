@@ -1,7 +1,29 @@
 (function() {
-  var PlayState, Player, game,
+  var Bullet, Physics, PlayState, Player, SlopeTile, game,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Bullet = (function(_super) {
+    __extends(Bullet, _super);
+
+    function Bullet(game) {
+      Bullet.__super__.constructor.call(this, game, 0, 0);
+    }
+
+    return Bullet;
+
+  })(Phaser.Sprite);
+
+  Physics = (function(_super) {
+    __extends(Physics, _super);
+
+    function Physics(game) {
+      Physics.__super__.constructor.call(this, game);
+    }
+
+    return Physics;
+
+  })(Phaser.Physics.Arcade);
 
   PlayState = (function(_super) {
     __extends(PlayState, _super);
@@ -67,40 +89,39 @@
       this.body = new Phaser.Physics.Arcade.Body(this);
       this.body.maxVelocity.setTo(this.flySpeed, this.flySpeed);
       this.body.drag.setTo(600, 600);
-      this.facing = Player.Facing.RIGHT;
-      this.cursors = game.input.keyboard.createCursorKeys();
+      this.facing = WZ.Player.Facing.RIGHT;
       this.anchor.setTo(.5, 1);
-      this.keys = {
-        c: game.input.keyboard.addKey(Phaser.Keyboard.C)
-      };
+      this.keys = game.input.keyboard.createCursorKeys();
+      this.keys.noTurn = game.input.keyboard.addKey(Phaser.Keyboard.C);
+      this.keys.shoot = game.input.keyboard.addKey(Phaser.Keyboard.X);
     }
 
     Player.prototype.update = function() {
-      if (this.cursors.left.justPressed() && this.body.velocity.x > 0) {
+      if (this.keys.left.justPressed() && this.body.velocity.x > 0) {
         this.body.velocity.x = 0;
-      } else if (this.cursors.right.justPressed() && this.body.velocity.x < 0) {
+      } else if (this.keys.right.justPressed() && this.body.velocity.x < 0) {
         this.body.velocity.x = 0;
       }
-      if (this.cursors.up.justPressed() && this.body.velocity.y > 0) {
+      if (this.keys.up.justPressed() && this.body.velocity.y > 0) {
         this.body.velocity.y = 0;
-      } else if (this.cursors.down.justPressed() && this.body.velocity.y < 0) {
+      } else if (this.keys.down.justPressed() && this.body.velocity.y < 0) {
         this.body.velocity.y = 0;
       }
-      if (this.cursors.right.isDown) {
+      if (this.keys.right.isDown) {
         this.body.acceleration.x = this.acceleration;
-      } else if (this.cursors.left.isDown) {
+      } else if (this.keys.left.isDown) {
         this.body.acceleration.x = 0 - this.acceleration;
       } else {
         this.body.acceleration.x = 0;
       }
-      if (this.cursors.down.isDown) {
+      if (this.keys.down.isDown) {
         this.body.acceleration.y = this.acceleration;
-      } else if (this.cursors.up.isDown) {
+      } else if (this.keys.up.isDown) {
         this.body.acceleration.y = 0 - this.acceleration;
       } else {
         this.body.acceleration.y = 0;
       }
-      if (!this.keys.c.isDown) {
+      if (!this.keys.noTurn.isDown) {
         if (this.body.velocity.x > 0) {
           this.facing = Player.Facing.RIGHT;
         } else if (this.body.velocity.x < 0) {
@@ -113,6 +134,27 @@
     return Player;
 
   })(Phaser.Sprite);
+
+  SlopeTile = (function(_super) {
+    __extends(SlopeTile, _super);
+
+    function SlopeTile(tileset, index, x, y, width, height, slope) {
+      SlopeTile.__super__.constructor.call(this, tileset, index, x, y, width, height);
+      this.triangle = call(this, SlopeTile.slopes[slope]);
+    }
+
+    return SlopeTile;
+
+  })(Phaser.Tile);
+
+  SlopeTile.slopes = {
+    TopRight45: function() {
+      return [new Phaser.Point(this.x, this.y), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
+    },
+    TopLeft45: function() {
+      return [new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
+    }
+  };
 
   game = new Phaser.Game(400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false);
 

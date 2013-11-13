@@ -1,3 +1,9 @@
+class Bullet extends Phaser.Sprite
+  constructor: (game) ->
+    super game, 0, 0
+class Physics extends Phaser.Physics.Arcade
+  constructor: (game) ->
+    super game
 class PlayState extends Phaser.State
   constructor: ->
 
@@ -58,48 +64,49 @@ class Player extends Phaser.Sprite
     @flySpeed = 150
     @acceleration = 900
 
+    # Create our physics body
     @body = new Phaser.Physics.Arcade.Body @
     @body.maxVelocity.setTo @flySpeed, @flySpeed
     @body.drag.setTo 600, 600
 
-    @facing = Player.Facing.RIGHT
+    @facing = WZ.Player.Facing.RIGHT
 
-    @cursors = game.input.keyboard.createCursorKeys()
-    # @scale.setTo 2, 2
+
     @anchor.setTo .5, 1
 
-    @keys =
-      c: game.input.keyboard.addKey Phaser.Keyboard.C
+    @keys = game.input.keyboard.createCursorKeys()
+    @keys.noTurn = game.input.keyboard.addKey Phaser.Keyboard.C
+    @keys.shoot = game.input.keyboard.addKey Phaser.Keyboard.X
 
   update: ->
     # If we're moving in a direction and press the opposite one, stop immediately.
-    if @cursors.left.justPressed() and @body.velocity.x > 0
+    if @keys.left.justPressed() and @body.velocity.x > 0
       @body.velocity.x = 0
-    else if @cursors.right.justPressed() and @body.velocity.x < 0
+    else if @keys.right.justPressed() and @body.velocity.x < 0
       @body.velocity.x = 0
 
-    if @cursors.up.justPressed() and @body.velocity.y > 0
+    if @keys.up.justPressed() and @body.velocity.y > 0
       @body.velocity.y = 0
-    else if @cursors.down.justPressed() and @body.velocity.y < 0
+    else if @keys.down.justPressed() and @body.velocity.y < 0
       @body.velocity.y = 0
 
     # Set the acceleration depending on keys pressed.
-    if @cursors.right.isDown
+    if @keys.right.isDown
       @body.acceleration.x = @acceleration
-    else if @cursors.left.isDown
+    else if @keys.left.isDown
       @body.acceleration.x = 0 - @acceleration
     else
       @body.acceleration.x = 0
 
-    if @cursors.down.isDown
+    if @keys.down.isDown
       @body.acceleration.y = @acceleration
-    else if @cursors.up.isDown
+    else if @keys.up.isDown
       @body.acceleration.y = 0 - @acceleration
     else
       @body.acceleration.y = 0
 
     # Flip the sprite if we've turned.
-    if !@keys.c.isDown
+    if !@keys.noTurn.isDown
       if @body.velocity.x > 0
         @facing = Player.Facing.RIGHT
       else if @body.velocity.x < 0
@@ -107,5 +114,23 @@ class Player extends Phaser.Sprite
 
     @scale.x = @facing
 
-# Enable cursors at the global level.
+class SlopeTile extends Phaser.Tile
+  constructor: (tileset, index, x, y, width, height, slope) ->
+    super tileset, index, x, y, width, height
+
+    @triangle = call @, SlopeTile.slopes[slope]
+
+SlopeTile.slopes =
+  TopRight45: -> 
+    return [
+      new Phaser.Point(@x, @y)
+      new Phaser.Point(@x + @width, @y + @height)
+      new Phaser.Point(@x, @y + @height)
+    ]
+  TopLeft45: ->
+    return [
+      new Phaser.Point(@x + @width, @y)
+      new Phaser.Point(@x + @width, @y + @height)
+      new Phaser.Point(@x, @y + @height)
+    ]
 game = new Phaser.Game 400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false

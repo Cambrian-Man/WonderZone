@@ -520,34 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "Gruntfile.coffee",
+			"file": "src/Bullet.coffee",
 			"settings":
 			{
-				"buffer_size": 388,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/game.coffee",
-			"settings":
-			{
-				"buffer_size": 129,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Player.coffee",
-			"settings":
-			{
-				"buffer_size": 1711,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/PlayState.coffee",
-			"settings":
-			{
-				"buffer_size": 1610,
+				"buffer_size": 80,
 				"line_ending": "Windows"
 			}
 		}
@@ -620,6 +596,13 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Bullet.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/loader/Loader.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/npm-debug.log",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/core/Camera.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/sprite tiles.js",
@@ -630,7 +613,6 @@
 		"/C/Users/Evan/Documents/GitHub/phaser/src/system/StageScaleMode.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/index.html",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/.gitignore",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/package.json",
@@ -639,9 +621,6 @@
 		"/C/Users/Evan/Documents/GitHub/WonderZone/index.html",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.src.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/index.jade",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/style.styl",
 		"/C/Users/Evan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
@@ -744,10 +723,7 @@
 		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.json",
 		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/ZapObject.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs",
-		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.example.json",
-		"/C/Users/Evan/Documents/My Box Files/#zap/.gitignore",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/BoardView.coffee"
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs"
 	],
 	"find":
 	{
@@ -766,6 +742,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"@cursors",
 			"resize",
 			"@background",
 			"dash",
@@ -849,6 +826,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"@keys",
 			"@farBackground",
 			"Teacher.canAdministrateUser(db, req.session.user, req.params.username).then (allowed) =>",
 			"Teacher.canAdministrateClass(db, req.session.user, req.params.id).then (allowed) =>",
@@ -890,118 +868,29 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gruntfile.coffee",
-					"semi_transient": false,
+					"file": "src/Bullet.coffee",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 388,
+						"buffer_size": 80,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								388,
-								388
+								80,
+								80
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/game.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								67,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/Player.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								500,
-								477
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/PlayState.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1610,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								356,
-								356
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1054,7 +943,7 @@
 	"project": "wonderzone.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 80.0
 	},
 	"save_all_on_build": true,
 	"select_file":
