@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"near",
+				"nearBackground"
+			],
+			[
+				"tileS",
+				"tileSprite"
+			],
+			[
+				"g",
+				"gfx"
+			],
+			[
+				"fa",
+				"Facing"
+			],
+			[
+				"fac",
+				"facing"
+			],
+			[
+				"Right",
+				"RIGHT"
+			],
+			[
+				"e",
+				"elif	Else if"
+			],
+			[
 				"dbh",
 				"dbHost"
 			],
@@ -486,34 +514,6 @@
 			[
 				"nam",
 				"namespace"
-			],
-			[
-				"tem",
-				"template"
-			],
-			[
-				"scri",
-				"script"
-			],
-			[
-				"mix",
-				"try_mixin"
-			],
-			[
-				"lab",
-				"label"
-			],
-			[
-				"label",
-				"label"
-			],
-			[
-				"pass",
-				"passable"
-			],
-			[
-				"obj",
-				"obj2"
 			]
 		]
 	},
@@ -531,7 +531,15 @@
 			"file": "src/game.coffee",
 			"settings":
 			{
-				"buffer_size": 85,
+				"buffer_size": 129,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Player.coffee",
+			"settings":
+			{
+				"buffer_size": 1711,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,23 +547,7 @@
 			"file": "src/PlayState.coffee",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "game/game.js",
-			"settings":
-			{
-				"buffer_size": 172,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
-			"settings":
-			{
-				"buffer_size": 1958,
+				"buffer_size": 1610,
 				"line_ending": "Windows"
 			}
 		}
@@ -563,9 +555,17 @@
 	"build_system": "Packages/AAAPackageDev/Support/JSON to Property List.sublime-build",
 	"command_palette":
 	{
-		"height": 185.0,
+		"height": 127.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"inden",
 				"Indentation: Convert to Spaces"
@@ -583,15 +583,7 @@
 				"Package Control: Install Package"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -607,7 +599,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 545.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -628,7 +620,26 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Evan/Documents/GitHub/phaser/src/core/Camera.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/sprite tiles.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/Body.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/TilemapLayer.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tileset.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tilemap.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/system/StageScaleMode.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/index.html",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/.gitignore",
+		"/C/Users/Evan/Documents/My Box Files/Mathlio/package.json",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/package.json",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/project.json",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/index.html",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.src.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/index.jade",
@@ -647,7 +658,6 @@
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Classroom.litcoffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/app/Student.litcoffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/Procfile",
-		"/C/Users/Evan/Documents/My Box Files/Mathlio/package.json",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/admin.litcoffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/Mathlio.litcoffee",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/routes/login.litcoffee",
@@ -737,25 +747,7 @@
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs",
 		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.example.json",
 		"/C/Users/Evan/Documents/My Box Files/#zap/.gitignore",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/BoardView.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Lex.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/shared/Collide.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Query.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Parser.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/package.json",
-		"/C/Users/Evan/Documents/My Box Files/#zap/node_modules/jasmine-node/spec-requirejs-coffee/requirecs.sut.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/spec/ObjectSpec.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/node_modules/jasmine-node/spec-requirejs-coffee/RequireCsSpec.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/spec/requirejs-setup.js",
-		"/C/Users/Evan/Documents/My Box Files/#zap/spec/Object.sut.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Query.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/ZapScript.pegjs",
-		"/C/Users/Evan/Documents/My Box Files/#zap/views/stylesheets/editor.styl",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/colorpalette.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/lib/ascii.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/QuickPaletteView.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/views/ModalForms.coffee"
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/BoardView.coffee"
 	],
 	"find":
 	{
@@ -774,6 +766,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"resize",
+			"@background",
 			"dash",
 			"teachers[req.session.user].canAdministrateUser(db, req.params.username).then (allowed) =>",
 			"teachers[req.session.user].canAdministrateClass(db, req.params.id).then (allowed) =>",
@@ -855,6 +849,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"@farBackground",
 			"Teacher.canAdministrateUser(db, req.session.user, req.params.username).then (allowed) =>",
 			"Teacher.canAdministrateClass(db, req.session.user, req.params.id).then (allowed) =>",
 			"fa fa",
@@ -895,7 +890,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -911,8 +906,8 @@
 						"selection":
 						[
 							[
-								300,
-								300
+								388,
+								388
 							]
 						],
 						"settings":
@@ -933,15 +928,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 85,
+						"buffer_size": 129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								85,
-								85
+								67,
+								67
 							]
 						],
 						"settings":
@@ -958,24 +953,26 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/PlayState.coffee",
+					"file": "src/Player.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								500,
+								477
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -985,52 +982,25 @@
 				},
 				{
 					"buffer": 3,
-					"file": "game/game.js",
+					"file": "src/PlayState.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 172,
+						"buffer_size": 1610,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
+								356,
+								356
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
