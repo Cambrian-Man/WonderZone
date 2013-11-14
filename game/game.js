@@ -21,6 +21,16 @@
       Physics.__super__.constructor.call(this, game);
     }
 
+    Physics.prototype.isInsideSlopeTile = function(p, tile) {
+      var p1, p2, p3, _ref;
+      _ref = tile.triangle, p1 = _ref[0], p2 = _ref[1], p3 = _ref[2];
+      return det(p, p1, p2) >= 0 && det(p, p2, p3) >= 0 && det(p, p3, p1) >= 0;
+    };
+
+    Physics.prototype.det = function(p1, p2, p3) {
+      return p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y);
+    };
+
     return Physics;
 
   })(Phaser.Physics.Arcade);
@@ -153,6 +163,12 @@
     },
     TopLeft45: function() {
       return [new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
+    },
+    BottomRight45: function() {
+      return [new Phaser.Point(this.x, this.y), new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x + this.width, this.y + this.height)];
+    },
+    BottomLeft45: function() {
+      return [new Phaser.Point(this.x, this.y), new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x, this.y + this.height)];
     }
   };
 

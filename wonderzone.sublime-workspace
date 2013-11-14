@@ -520,10 +520,18 @@
 	"buffers":
 	[
 		{
-			"file": "src/Bullet.coffee",
+			"file": "src/Physics.coffee",
 			"settings":
 			{
-				"buffer_size": 80,
+				"buffer_size": 360,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/SlopeTile.coffee",
+			"settings":
+			{
+				"buffer_size": 836,
 				"line_ending": "Windows"
 			}
 		}
@@ -596,22 +604,24 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/SlopeTile.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Physics.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Bullet.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/loader/Loader.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/npm-debug.log",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/core/Camera.js",
-		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/sprite tiles.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/Body.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/TilemapLayer.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tileset.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tilemap.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/system/StageScaleMode.js",
-		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/index.html",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/.gitignore",
@@ -721,13 +731,11 @@
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/Dungeon.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/Editor.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.json",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/ZapObject.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/ZapScript.pegjs"
+		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -742,6 +750,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"separate",
 			"@cursors",
 			"resize",
 			"@background",
@@ -873,24 +882,53 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/Bullet.coffee",
-					"semi_transient": true,
+					"file": "src/Physics.coffee",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 80,
+						"buffer_size": 360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								80,
-								80
+								360,
+								360
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/SlopeTile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								836,
+								836
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
