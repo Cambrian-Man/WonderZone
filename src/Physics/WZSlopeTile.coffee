@@ -1,13 +1,14 @@
-class SlopeTile extends Phaser.Tile
+class WZSlopeTile extends Phaser.Tile
   constructor: (tileset, index, x, y, width, height, slope) ->
-    super tileset, index, x, y, width, height
+    __super__ = new Phaser.Tile tileset, index, x, y, width, height
+    console.log @
 
-    @triangle = call @, SlopeTile.slopes[slope]
+    @triangle = WZSlopeTile.slopes[slope].call @, x, y, width, height
 
-SlopeTile.slopes =
+WZSlopeTile.slopes =
   TopRight45: -> 
     return [
-      new Phaser.Point @x, @y
+      new Phaser.Point 0, 0
       new Phaser.Point @x + @width, @y + @height
       new Phaser.Point @x, @y + @height
     ]

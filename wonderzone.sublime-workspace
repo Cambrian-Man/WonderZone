@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"tileset",
+				"tileset"
+			],
+			[
+				"tile",
+				"tileproperties"
+			],
+			[
+				"Tl",
+				"TilemapParser"
+			],
+			[
 				"near",
 				"nearBackground"
 			],
@@ -502,36 +514,40 @@
 			[
 				"crea",
 				"createQueries"
-			],
-			[
-				"buidl",
-				"buildScript"
-			],
-			[
-				"labe",
-				"label"
-			],
-			[
-				"nam",
-				"namespace"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/Physics.coffee",
+			"file": "src/Physics/WZTilemapParser.coffee",
 			"settings":
 			{
-				"buffer_size": 360,
+				"buffer_size": 1830,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/SlopeTile.coffee",
+			"file": "src/Physics/WZSlopeTile.coffee",
 			"settings":
 			{
-				"buffer_size": 836,
+				"buffer_size": 900,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
+			"settings":
+			{
+				"buffer_size": 5449,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gruntfile.coffee",
+			"settings":
+			{
+				"buffer_size": 438,
 				"line_ending": "Windows"
 			}
 		}
@@ -604,22 +620,28 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/TilemapParser.js",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Physics/WZTilemapParser.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/WZSlopeTile.coffee",
+		"/C/Users/Evan/Documents/GitHub/WonderZone/src/WZPhysics.coffee",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tileset.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/TilemapLayer.js",
+		"/C/Users/Evan/Documents/GitHub/phaser/examples/tilemaps/mapcollide.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/SlopeTile.coffee",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
-		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/ArcadePhysics.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Physics.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/game.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/PlayState.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Bullet.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/src/Player.coffee",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/loader/Loader.js",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/Gruntfile.coffee",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/npm-debug.log",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/core/Camera.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/collision/sprite tiles.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/physics/arcade/Body.js",
-		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/TilemapLayer.js",
-		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tileset.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tilemap.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/src/system/StageScaleMode.js",
 		"/C/Users/Evan/Documents/GitHub/phaser/examples/world/move around world.js",
@@ -630,7 +652,6 @@
 		"/C/Users/Evan/Documents/GitHub/WonderZone/project.json",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/index.html",
 		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.src.coffee",
-		"/C/Users/Evan/Documents/GitHub/WonderZone/game/game.js",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/index.jade",
 		"/C/Users/Evan/Documents/My Box Files/Mathlio/views/css/style.styl",
 		"/C/Users/Evan/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
@@ -726,12 +747,7 @@
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/Server.coffee",
 		"/C/Users/Evan/Documents/My Box Files/#zap/views/index.jade",
 		"/C/Users/Evan/Documents/My Box Files/#zap/server/DB.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Script/Manager.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/server/Dungeon.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/Editor.coffee",
-		"/C/Users/Evan/Documents/My Box Files/#zap/zap-configuration.json",
-		"/C/Users/Evan/Documents/My Box Files/#zap/client_source/UI/ScriptEdit.coffee"
+		"/C/Users/Evan/Documents/My Box Files/#zap/server/Board.coffee"
 	],
 	"find":
 	{
@@ -750,6 +766,14 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"x",
+			"@",
+			";",
+			"var ",
+			"var",
+			"//",
+			"tile",
+			"collide",
 			"separate",
 			"@cursors",
 			"resize",
@@ -835,6 +859,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"0",
+			"",
+			"#",
 			"@keys",
 			"@farBackground",
 			"Teacher.canAdministrateUser(db, req.session.user, req.params.username).then (allowed) =>",
@@ -877,29 +904,59 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Physics.coffee",
+					"file": "src/Physics/WZTilemapParser.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 360,
+						"buffer_size": 1830,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								360,
-								360
+								1810,
+								1810
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/Physics/WZSlopeTile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -908,20 +965,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/SlopeTile.coffee",
+					"buffer": 2,
+					"file": "/C/Users/Evan/Documents/GitHub/phaser/src/tilemap/Tile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 836,
+						"buffer_size": 5449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								836,
-								836
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gruntfile.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
 							]
 						],
 						"settings":

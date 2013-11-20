@@ -12,7 +12,7 @@ class PlayState extends Phaser.State
     @loadMap 'test', 'tiles'
 
     # Set up player
-    @player = new Player game, 100, 100
+    @player = new Player game, 100, 140
     game.add.existing @player
     game.camera.follow @player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT
 
@@ -43,6 +43,10 @@ class PlayState extends Phaser.State
   loadMap: (map, tiles) ->
     map = game.add.tilemap map
     tileset = game.add.tileset tiles
+    tileset.setCollisionRange 1, 36, true, true, true, true,
 
-    layer = game.add.tilemapLayer 0, 0, 400, 300, tileset, map, 0
-    layer.resizeWorld()
+    @walls = game.add.tilemapLayer 0, 0, 400, 300, tileset, map, 0
+    @walls.resizeWorld()
+
+  update: ->
+    game.physics.collide @player, @walls 

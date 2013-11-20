@@ -1,17 +1,6 @@
 class Bullet extends Phaser.Sprite
   constructor: (game) ->
     super game, 0, 0
-class Physics extends Phaser.Physics.Arcade
-  constructor: (game) ->
-    super game
-
-  isInsideSlopeTile: (p, tile) ->
-    [p1, p2, p3] = tile.triangle
-    det(p, p1, p2) >=0 && det(p, p2, p3) >= 0 && det(p, p3, p1) >= 0
-
-  # Gets the determinant of three points forming a triangle.
-  det: (p1, p2, p3) ->
-    p1.x*(p2.y-p3.y)+p2.x*(p3.y-p1.y)+p3.x*(p1.y-p2.y)
 class PlayState extends Phaser.State
   constructor: ->
 
@@ -26,7 +15,7 @@ class PlayState extends Phaser.State
     @loadMap 'test', 'tiles'
 
     # Set up player
-    @player = new Player game, 100, 100
+    @player = new Player game, 100, 140
     game.add.existing @player
     game.camera.follow @player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT
 
@@ -57,9 +46,13 @@ class PlayState extends Phaser.State
   loadMap: (map, tiles) ->
     map = game.add.tilemap map
     tileset = game.add.tileset tiles
+    tileset.setCollisionRange 1, 36, true, true, true, true,
 
-    layer = game.add.tilemapLayer 0, 0, 400, 300, tileset, map, 0
-    layer.resizeWorld()
+    @walls = game.add.tilemapLayer 0, 0, 400, 300, tileset, map, 0
+    @walls.resizeWorld()
+
+  update: ->
+    game.physics.collide @player, @walls 
 class Player extends Phaser.Sprite
   Player.Facing =
     LEFT: -1
@@ -77,7 +70,7 @@ class Player extends Phaser.Sprite
     @body.maxVelocity.setTo @flySpeed, @flySpeed
     @body.drag.setTo 600, 600
 
-    @facing = WZ.Player.Facing.RIGHT
+    @facing = Player.Facing.RIGHT
 
 
     @anchor.setTo .5, 1
@@ -122,16 +115,30 @@ class Player extends Phaser.Sprite
 
     @scale.x = @facing
 
-class SlopeTile extends Phaser.Tile
+game = new Phaser.Game 400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false
+class WZPhysics extends Phaser.Physics.Arcade
+  constructor: (game) ->
+    super game
+
+  # Returns true if the point p is inside the given tile.
+  isInsideSlopeTile: (p, tile) ->
+    [p1, p2, p3] = tile.triangle
+    det(p, p1, p2) >=0 && det(p, p2, p3) >= 0 && det(p, p3, p1) >= 0
+
+  # Gets the determinant of three points forming a triangle.
+  det: (p1, p2, p3) ->
+    p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)
+class WZSlopeTile extends Phaser.Tile
   constructor: (tileset, index, x, y, width, height, slope) ->
-    super tileset, index, x, y, width, height
+    __super__ = new Phaser.Tile tileset, index, x, y, width, height
+    console.log @
 
-    @triangle = call @, SlopeTile.slopes[slope]
+    @triangle = WZSlopeTile.slopes[slope].call @, x, y, width, height
 
-SlopeTile.slopes =
+WZSlopeTile.slopes =
   TopRight45: -> 
     return [
-      new Phaser.Point @x, @y
+      new Phaser.Point 0, 0
       new Phaser.Point @x + @width, @y + @height
       new Phaser.Point @x, @y + @height
     ]
@@ -153,4 +160,62 @@ SlopeTile.slopes =
       new Phaser.Point @x + @width, @y
       new Phaser.Point @x, @y + @height
     ]
-game = new Phaser.Game 400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false
+Phaser.TilemapParser.tileset = (game, key, tileWidth, tileHeight, tileMax, tileMargin, tileSpacing) ->
+      tileproperties =
+        18:
+          "slope": "TopRight45"
+        19:
+          "slope": "TopLeft45"
+        8:
+          "slope": "BottomRight45"
+        9:
+          "slope":"BottomLeft45"
+
+      #  How big is our image?
+      img = game.cache.getTilesetImage(key)
+
+      if (img == null)
+        return null
+
+      width = img.width
+      height = img.height
+
+      #  If no tile width/height is given, try and figure it out (won't work if the tileset has margin/spacing)
+      if (tileWidth <= 0)
+        tileWidth = Math.floor(-width / Math.min(-1, tileWidth))
+
+      if (tileHeight <= 0)
+        tileHeight = Math.floor(-height / Math.min(-1, tileHeight))
+
+      row = Math.round(width / tileWidth)
+      column = Math.round(height / tileHeight)
+      total = row * column
+      
+      if (tileMax != -1)
+        total = tileMax
+
+      #  Zero or smaller than tile sizes?
+      if (width == 0 || height == 0 || width < tileWidth || height < tileHeight || total == 0)
+        console.warn("Phaser.TilemapParser.tileSet: width/height zero or width/height < given tileWidth/tileHeight")
+        return null
+
+      #  Let's create some tiles
+      x = tileMargin
+      y = tileMargin
+
+      tileset = new Phaser.Tileset(img, key, tileWidth, tileHeight, tileMargin, tileSpacing)
+
+      for i in [0 .. total]
+        if tileproperties[i]?
+          tileset.addTile new WZSlopeTile tileset, i, x, y, tileWidth, tileHeight, tileproperties[i].slope
+        else
+          tileset.addTile(new Phaser.Tile(tileset, i, x, y, tileWidth, tileHeight))
+
+        x += tileWidth + tileSpacing
+
+        if (x == width)
+          x = tileMargin
+          y += tileHeight + tileSpacing
+
+      console.log tileset
+      return tileset

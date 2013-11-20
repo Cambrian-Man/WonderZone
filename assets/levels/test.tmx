@@ -2,6 +2,26 @@
 <map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32">
   <image source="../gfx/tiles.png" width="320" height="320"/>
+  <tile id="8">
+   <properties>
+    <property name="slope" value="BottomRight45"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="slope" value="BottomLeft45"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="slope" value="TopRight45"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="slope" value="TopLeft45"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Tile Layer 1" width="50" height="50">
   <data encoding="csv">

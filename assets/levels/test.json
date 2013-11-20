@@ -31,6 +31,25 @@
             },
          "spacing":0,
          "tileheight":32,
+         "tileproperties":
+            {
+             "18":
+                {
+                 "slope":"TopRight45"
+                },
+             "19":
+                {
+                 "slope":"TopLeft45"
+                },
+             "8":
+                {
+                 "slope":"BottomRight45"
+                },
+             "9":
+                {
+                 "slope":"BottomLeft45"
+                }
+            },
          "tilewidth":32
         }],
  "tilewidth":32,

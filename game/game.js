@@ -1,5 +1,5 @@
 (function() {
-  var Bullet, Physics, PlayState, Player, SlopeTile, game,
+  var Bullet, PlayState, Player, WZPhysics, WZSlopeTile, game,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -14,27 +14,6 @@
 
   })(Phaser.Sprite);
 
-  Physics = (function(_super) {
-    __extends(Physics, _super);
-
-    function Physics(game) {
-      Physics.__super__.constructor.call(this, game);
-    }
-
-    Physics.prototype.isInsideSlopeTile = function(p, tile) {
-      var p1, p2, p3, _ref;
-      _ref = tile.triangle, p1 = _ref[0], p2 = _ref[1], p3 = _ref[2];
-      return det(p, p1, p2) >= 0 && det(p, p2, p3) >= 0 && det(p, p3, p1) >= 0;
-    };
-
-    Physics.prototype.det = function(p1, p2, p3) {
-      return p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y);
-    };
-
-    return Physics;
-
-  })(Phaser.Physics.Arcade);
-
   PlayState = (function(_super) {
     __extends(PlayState, _super);
 
@@ -46,7 +25,7 @@
       this.nearBackground = game.add.tileSprite(0, 0, 800, 600, 'near_background');
       this.nearBackground.fixedToCamera = true;
       this.loadMap('test', 'tiles');
-      this.player = new Player(game, 100, 100);
+      this.player = new Player(game, 100, 140);
       game.add.existing(this.player);
       return game.camera.follow(this.player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
     };
@@ -73,11 +52,15 @@
     };
 
     PlayState.prototype.loadMap = function(map, tiles) {
-      var layer, tileset;
+      var tileset;
       map = game.add.tilemap(map);
       tileset = game.add.tileset(tiles);
-      layer = game.add.tilemapLayer(0, 0, 400, 300, tileset, map, 0);
-      return layer.resizeWorld();
+      tileset.setCollisionRange(1, 36, true, true, true, true, this.walls = game.add.tilemapLayer(0, 0, 400, 300, tileset, map, 0));
+      return this.walls.resizeWorld();
+    };
+
+    PlayState.prototype.update = function() {
+      return game.physics.collide(this.player, this.walls);
     };
 
     return PlayState;
@@ -99,7 +82,7 @@
       this.body = new Phaser.Physics.Arcade.Body(this);
       this.body.maxVelocity.setTo(this.flySpeed, this.flySpeed);
       this.body.drag.setTo(600, 600);
-      this.facing = WZ.Player.Facing.RIGHT;
+      this.facing = Player.Facing.RIGHT;
       this.anchor.setTo(.5, 1);
       this.keys = game.input.keyboard.createCursorKeys();
       this.keys.noTurn = game.input.keyboard.addKey(Phaser.Keyboard.C);
@@ -145,21 +128,46 @@
 
   })(Phaser.Sprite);
 
-  SlopeTile = (function(_super) {
-    __extends(SlopeTile, _super);
+  game = new Phaser.Game(400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false);
 
-    function SlopeTile(tileset, index, x, y, width, height, slope) {
-      SlopeTile.__super__.constructor.call(this, tileset, index, x, y, width, height);
-      this.triangle = call(this, SlopeTile.slopes[slope]);
+  WZPhysics = (function(_super) {
+    __extends(WZPhysics, _super);
+
+    function WZPhysics(game) {
+      WZPhysics.__super__.constructor.call(this, game);
     }
 
-    return SlopeTile;
+    WZPhysics.prototype.isInsideSlopeTile = function(p, tile) {
+      var p1, p2, p3, _ref;
+      _ref = tile.triangle, p1 = _ref[0], p2 = _ref[1], p3 = _ref[2];
+      return det(p, p1, p2) >= 0 && det(p, p2, p3) >= 0 && det(p, p3, p1) >= 0;
+    };
+
+    WZPhysics.prototype.det = function(p1, p2, p3) {
+      return p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y);
+    };
+
+    return WZPhysics;
+
+  })(Phaser.Physics.Arcade);
+
+  WZSlopeTile = (function(_super) {
+    __extends(WZSlopeTile, _super);
+
+    function WZSlopeTile(tileset, index, x, y, width, height, slope) {
+      var __super__;
+      __super__ = new Phaser.Tile(tileset, index, x, y, width, height);
+      console.log(this);
+      this.triangle = WZSlopeTile.slopes[slope].call(this, x, y, width, height);
+    }
+
+    return WZSlopeTile;
 
   })(Phaser.Tile);
 
-  SlopeTile.slopes = {
+  WZSlopeTile.slopes = {
     TopRight45: function() {
-      return [new Phaser.Point(this.x, this.y), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
+      return [new Phaser.Point(0, 0), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
     },
     TopLeft45: function() {
       return [new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x + this.width, this.y + this.height), new Phaser.Point(this.x, this.y + this.height)];
@@ -172,7 +180,62 @@
     }
   };
 
-  game = new Phaser.Game(400, 300, Phaser.CANVAS, 'wonderzone', new PlayState(), false, false);
+  Phaser.TilemapParser.tileset = function(game, key, tileWidth, tileHeight, tileMax, tileMargin, tileSpacing) {
+    var column, height, i, img, row, tileproperties, tileset, total, width, x, y, _i;
+    tileproperties = {
+      18: {
+        "slope": "TopRight45"
+      },
+      19: {
+        "slope": "TopLeft45"
+      },
+      8: {
+        "slope": "BottomRight45"
+      },
+      9: {
+        "slope": "BottomLeft45"
+      }
+    };
+    img = game.cache.getTilesetImage(key);
+    if (img === null) {
+      return null;
+    }
+    width = img.width;
+    height = img.height;
+    if (tileWidth <= 0) {
+      tileWidth = Math.floor(-width / Math.min(-1, tileWidth));
+    }
+    if (tileHeight <= 0) {
+      tileHeight = Math.floor(-height / Math.min(-1, tileHeight));
+    }
+    row = Math.round(width / tileWidth);
+    column = Math.round(height / tileHeight);
+    total = row * column;
+    if (tileMax !== -1) {
+      total = tileMax;
+    }
+    if (width === 0 || height === 0 || width < tileWidth || height < tileHeight || total === 0) {
+      console.warn("Phaser.TilemapParser.tileSet: width/height zero or width/height < given tileWidth/tileHeight");
+      return null;
+    }
+    x = tileMargin;
+    y = tileMargin;
+    tileset = new Phaser.Tileset(img, key, tileWidth, tileHeight, tileMargin, tileSpacing);
+    for (i = _i = 0; 0 <= total ? _i <= total : _i >= total; i = 0 <= total ? ++_i : --_i) {
+      if (tileproperties[i] != null) {
+        tileset.addTile(new WZSlopeTile(tileset, i, x, y, tileWidth, tileHeight, tileproperties[i].slope));
+      } else {
+        tileset.addTile(new Phaser.Tile(tileset, i, x, y, tileWidth, tileHeight));
+      }
+      x += tileWidth + tileSpacing;
+      if (x === width) {
+        x = tileMargin;
+        y += tileHeight + tileSpacing;
+      }
+    }
+    console.log(tileset);
+    return tileset;
+  };
 
 }).call(this);
 

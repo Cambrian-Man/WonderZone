@@ -15,7 +15,7 @@ class Player extends Phaser.Sprite
     @body.maxVelocity.setTo @flySpeed, @flySpeed
     @body.drag.setTo 600, 600
 
-    @facing = WZ.Player.Facing.RIGHT
+    @facing = Player.Facing.RIGHT
 
 
     @anchor.setTo .5, 1
