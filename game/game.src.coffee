@@ -14,6 +14,8 @@ class PlayState extends Phaser.State
 
     @loadMap 'test', 'tiles'
 
+    @mapData = game.cache.getTilemapData 'test'
+
     # Set up player
     @player = new Player game, 100, 140
     game.add.existing @player
@@ -34,6 +36,7 @@ class PlayState extends Phaser.State
     game.load.image 'near_background', 'assets/gfx/near_background.png'
 
     # Load Levels and Tilemaps
+
     game.load.tilemap 'test', 'assets/levels/test.json', null, Phaser.Tilemap.TILED_JSON
     game.load.tileset 'tiles', 'assets/gfx/tiles.png', 32, 32
 
@@ -128,11 +131,10 @@ class WZPhysics extends Phaser.Physics.Arcade
   # Gets the determinant of three points forming a triangle.
   det: (p1, p2, p3) ->
     p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)
-class WZSlopeTile extends Phaser.Tile
+class WZSlopeTile
   constructor: (tileset, index, x, y, width, height, slope) ->
-    __super__ = new Phaser.Tile tileset, index, x, y, width, height
-    console.log @
-
+    @tile = new Phaser.Tile tileset, index, x, y, width, height
+    
     @triangle = WZSlopeTile.slopes[slope].call @, x, y, width, height
 
 WZSlopeTile.slopes =
@@ -160,62 +162,62 @@ WZSlopeTile.slopes =
       new Phaser.Point @x + @width, @y
       new Phaser.Point @x, @y + @height
     ]
-Phaser.TilemapParser.tileset = (game, key, tileWidth, tileHeight, tileMax, tileMargin, tileSpacing) ->
-      tileproperties =
-        18:
-          "slope": "TopRight45"
-        19:
-          "slope": "TopLeft45"
-        8:
-          "slope": "BottomRight45"
-        9:
-          "slope":"BottomLeft45"
+# Phaser.TilemapParser.tileset = (game, key, tileWidth, tileHeight, tileMax, tileMargin, tileSpacing) ->
+#       tileproperties =
+#         18:
+#           "slope": "TopRight45"
+#         19:
+#           "slope": "TopLeft45"
+#         8:
+#           "slope": "BottomRight45"
+#         9:
+#           "slope":"BottomLeft45"
 
-      #  How big is our image?
-      img = game.cache.getTilesetImage(key)
+#       #  How big is our image?
+#       img = game.cache.getTilesetImage(key)
 
-      if (img == null)
-        return null
+#       if (img == null)
+#         return null
 
-      width = img.width
-      height = img.height
+#       width = img.width
+#       height = img.height
 
-      #  If no tile width/height is given, try and figure it out (won't work if the tileset has margin/spacing)
-      if (tileWidth <= 0)
-        tileWidth = Math.floor(-width / Math.min(-1, tileWidth))
+#       #  If no tile width/height is given, try and figure it out (won't work if the tileset has margin/spacing)
+#       if (tileWidth <= 0)
+#         tileWidth = Math.floor(-width / Math.min(-1, tileWidth))
 
-      if (tileHeight <= 0)
-        tileHeight = Math.floor(-height / Math.min(-1, tileHeight))
+#       if (tileHeight <= 0)
+#         tileHeight = Math.floor(-height / Math.min(-1, tileHeight))
 
-      row = Math.round(width / tileWidth)
-      column = Math.round(height / tileHeight)
-      total = row * column
+#       row = Math.round(width / tileWidth)
+#       column = Math.round(height / tileHeight)
+#       total = row * column
       
-      if (tileMax != -1)
-        total = tileMax
+#       if (tileMax != -1)
+#         total = tileMax
 
-      #  Zero or smaller than tile sizes?
-      if (width == 0 || height == 0 || width < tileWidth || height < tileHeight || total == 0)
-        console.warn("Phaser.TilemapParser.tileSet: width/height zero or width/height < given tileWidth/tileHeight")
-        return null
+#       #  Zero or smaller than tile sizes?
+#       if (width == 0 || height == 0 || width < tileWidth || height < tileHeight || total == 0)
+#         console.warn("Phaser.TilemapParser.tileSet: width/height zero or width/height < given tileWidth/tileHeight")
+#         return null
 
-      #  Let's create some tiles
-      x = tileMargin
-      y = tileMargin
+#       #  Let's create some tiles
+#       x = tileMargin
+#       y = tileMargin
 
-      tileset = new Phaser.Tileset(img, key, tileWidth, tileHeight, tileMargin, tileSpacing)
+#       tileset = new Phaser.Tileset(img, key, tileWidth, tileHeight, tileMargin, tileSpacing)
 
-      for i in [0 .. total]
-        if tileproperties[i]?
-          tileset.addTile new WZSlopeTile tileset, i, x, y, tileWidth, tileHeight, tileproperties[i].slope
-        else
-          tileset.addTile(new Phaser.Tile(tileset, i, x, y, tileWidth, tileHeight))
+#       for i in [0 .. total]
+#         if tileproperties[i]?
+#           tileset.addTile new WZSlopeTile tileset, i, x, y, tileWidth, tileHeight, tileproperties[i].slope
+#         else
+#           tileset.addTile(new Phaser.Tile(tileset, i, x, y, tileWidth, tileHeight))
 
-        x += tileWidth + tileSpacing
+#         x += tileWidth + tileSpacing
 
-        if (x == width)
-          x = tileMargin
-          y += tileHeight + tileSpacing
+#         if (x == width)
+#           x = tileMargin
+#           y += tileHeight + tileSpacing
 
-      console.log tileset
-      return tileset
+#       console.log tileset
+#       return tileset

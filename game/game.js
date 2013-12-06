@@ -25,6 +25,7 @@
       this.nearBackground = game.add.tileSprite(0, 0, 800, 600, 'near_background');
       this.nearBackground.fixedToCamera = true;
       this.loadMap('test', 'tiles');
+      this.mapData = game.cache.getTilemapData('test');
       this.player = new Player(game, 100, 140);
       game.add.existing(this.player);
       return game.camera.follow(this.player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
@@ -151,19 +152,15 @@
 
   })(Phaser.Physics.Arcade);
 
-  WZSlopeTile = (function(_super) {
-    __extends(WZSlopeTile, _super);
-
+  WZSlopeTile = (function() {
     function WZSlopeTile(tileset, index, x, y, width, height, slope) {
-      var __super__;
-      __super__ = new Phaser.Tile(tileset, index, x, y, width, height);
-      console.log(this);
+      this.tile = new Phaser.Tile(tileset, index, x, y, width, height);
       this.triangle = WZSlopeTile.slopes[slope].call(this, x, y, width, height);
     }
 
     return WZSlopeTile;
 
-  })(Phaser.Tile);
+  })();
 
   WZSlopeTile.slopes = {
     TopRight45: function() {
@@ -178,63 +175,6 @@
     BottomLeft45: function() {
       return [new Phaser.Point(this.x, this.y), new Phaser.Point(this.x + this.width, this.y), new Phaser.Point(this.x, this.y + this.height)];
     }
-  };
-
-  Phaser.TilemapParser.tileset = function(game, key, tileWidth, tileHeight, tileMax, tileMargin, tileSpacing) {
-    var column, height, i, img, row, tileproperties, tileset, total, width, x, y, _i;
-    tileproperties = {
-      18: {
-        "slope": "TopRight45"
-      },
-      19: {
-        "slope": "TopLeft45"
-      },
-      8: {
-        "slope": "BottomRight45"
-      },
-      9: {
-        "slope": "BottomLeft45"
-      }
-    };
-    img = game.cache.getTilesetImage(key);
-    if (img === null) {
-      return null;
-    }
-    width = img.width;
-    height = img.height;
-    if (tileWidth <= 0) {
-      tileWidth = Math.floor(-width / Math.min(-1, tileWidth));
-    }
-    if (tileHeight <= 0) {
-      tileHeight = Math.floor(-height / Math.min(-1, tileHeight));
-    }
-    row = Math.round(width / tileWidth);
-    column = Math.round(height / tileHeight);
-    total = row * column;
-    if (tileMax !== -1) {
-      total = tileMax;
-    }
-    if (width === 0 || height === 0 || width < tileWidth || height < tileHeight || total === 0) {
-      console.warn("Phaser.TilemapParser.tileSet: width/height zero or width/height < given tileWidth/tileHeight");
-      return null;
-    }
-    x = tileMargin;
-    y = tileMargin;
-    tileset = new Phaser.Tileset(img, key, tileWidth, tileHeight, tileMargin, tileSpacing);
-    for (i = _i = 0; 0 <= total ? _i <= total : _i >= total; i = 0 <= total ? ++_i : --_i) {
-      if (tileproperties[i] != null) {
-        tileset.addTile(new WZSlopeTile(tileset, i, x, y, tileWidth, tileHeight, tileproperties[i].slope));
-      } else {
-        tileset.addTile(new Phaser.Tile(tileset, i, x, y, tileWidth, tileHeight));
-      }
-      x += tileWidth + tileSpacing;
-      if (x === width) {
-        x = tileMargin;
-        y += tileHeight + tileSpacing;
-      }
-    }
-    console.log(tileset);
-    return tileset;
   };
 
 }).call(this);

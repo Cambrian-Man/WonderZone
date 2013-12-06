@@ -11,6 +11,8 @@ class PlayState extends Phaser.State
 
     @loadMap 'test', 'tiles'
 
+    @mapData = game.cache.getTilemapData 'test'
+
     # Set up player
     @player = new Player game, 100, 140
     game.add.existing @player
@@ -31,6 +33,7 @@ class PlayState extends Phaser.State
     game.load.image 'near_background', 'assets/gfx/near_background.png'
 
     # Load Levels and Tilemaps
+
     game.load.tilemap 'test', 'assets/levels/test.json', null, Phaser.Tilemap.TILED_JSON
     game.load.tileset 'tiles', 'assets/gfx/tiles.png', 32, 32
 
